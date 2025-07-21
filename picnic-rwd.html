@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Picnic CSS RWD Menu</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic">
+  <style>
+    /* 漢堡選單開關邏輯 */
+    /*
+    #bmenub:not(:checked) ~ .menu {
+      display: none;
+    }
+
+    #bmenub:checked ~ .menu {
+      display: block;
+    }
+*/
+    /* 響應式排版：手機垂直排列選單 */
+    @media (max-width: 768px) {
+      .menu a {
+        display: block;
+        margin: 0.5rem 0;
+      }
+    }
+
+    /* 額外美化選單背景 */
+    .menu {
+      background: #fff;
+      padding: 0.5rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .logo {
+      height: 32px;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+
+    .demo{
+      border: 1px solid red;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="demo">
+    <a href="#" class="brand">
+      <img class="logo" src="https://cdn-icons-png.flaticon.com/512/1046/1046784.png" alt="Logo" />
+      <span>Picnic CSS</span>
+    </a>
+
+    <!-- checkbox 控制選單 -->
+    <input id="bmenub" type="checkbox" class="show">
+    <label for="bmenub" class="burger pseudo button">&#9776;</label>
+
+    <!-- 漢堡選單內容 -->
+    <div class="menu">
+      <a href="#" class="pseudo button icon-picture">Demo</a>
+      <a href="#" class="button icon-puzzle">Plugins</a>
+      <a href="#" class="button icon-settings">設定</a>
+    </div>
+  </nav>
+<div style="margin-top: 80px;border: 1px solid #000;">
+  <label for="picdate">日期：</label>
+  <input type="date" id="picdate" name="picdate" />
+</div>
+</body>
+</html>
